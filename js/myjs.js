@@ -1,22 +1,46 @@
 const _alboms = [
 	{
 		id: 1,
-		title: 'Albom 1',
+		title: 'Humans (Deluxe)',
+		year: 2017,
 		songs: [1,2,3],
-		image: 'https://uh8yh30l48rpize52xh0q1o6i-wpengine.netdna-ssl.com/wp-content/uploads/2014/05/header-image-photo-rights.png',
+		image: 'images/Album1.png',
 	},
 	{
 		id: 2,
-		title: 'Albom 2',
+		title: 'Plastic Beach',
+		year: 2010,
 		songs: [1,3,4],
-		image: 'http://www.maximumwall.com/wp-content/uploads/2017/01/wallpaper-image-nourriture-hd-13.jpg',
+		image: 'images/Album2.png',
 	},
 	{
 		id: 3,
-		title: 'Albom 3',
+		title: 'The Fall',
+		year: 2010,
 		songs: [1,2,4],
-		image: 'https://www.violon.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/p/2/p200_face_2.jpg',
-	}
+		image: 'images/Album3.png',
+	},
+	{
+		id: 4,
+		title: 'D Sides',
+		year: 2009,
+		songs: [1,2,3],
+		image: 'images/Album4.png',
+	},
+	{
+		id: 5,
+		title: 'Demon Days',
+		year: 2007,
+		songs: [1,2,3],
+		image: 'images/Album5.png',
+	},
+	{
+		id: 6,
+		title: 'Gorillaz',
+		year: 2006,
+		songs: [1,2,3],
+		image: 'images/Album6.png',
+	},
 ];
 
 const _songs = [
@@ -52,19 +76,18 @@ let _selectedSong = {};
 var context = new AudioContext();
 
 var audio = new Audio();
-var songs = document.querySelectorAll("a");
+//var songs = document.querySelectorAll("a");
 var nowPlay= document.querySelector(".nowPlay");
-var playS = document.querySelector("#playSound");
+var playSound = document.querySelector("#playSound");
 var pause = document.querySelector(".pauseSound");
 var stop = document.querySelector(".stopSound");
 var next = document.querySelector(".next");
 var prev = document.querySelector(".prev");
-var range = document.querySelector("#rangeP");
-var progressT = document.querySelector("#progressTime");
-var timeS = document.querySelector(".timeAll");
-var timeN = document.querySelector(".timeNow");
+var rangeVolume = document.querySelector("#rangeVolume");
+var progressTime = document.querySelector("#progressTime");
+var timeAll = document.querySelector(".timeAll");
+var timeNow = document.querySelector(".timeNow");
 var temp  = 0;
-
 var m = 0, tm = 0, s = 0, ts=0;
 
 var gainNode = context.createGain();
@@ -73,8 +96,8 @@ var source;
 
 audio.addEventListener('timeupdate',function (){
 	let curtime = parseInt(this.currentTime,10);
-			progressT.max = this.duration;
-			progressT.value = curtime;
+			progressTime.max = this.duration;
+			progressTime.value = curtime;
 			m = parseInt(curtime/600,10);
 	if (m > 0) {
 		curtime = curtime-600*m;
@@ -90,7 +113,7 @@ audio.addEventListener('timeupdate',function (){
 
 	//tm = parseInt(curent/10,10);
 
-	timeN.innerHTML = m+""+tm+":"+s+""+curtime;
+	timeNow.innerHTML = m+""+tm+":"+s+""+curtime;
 });
 
 
@@ -100,18 +123,21 @@ function render() {
 
 function renderAlboms(alboms) {
 	var ul = document.createElement('ul');
-
+    ul.setAttribute("class","alb");
 	for (i = 0; i < alboms.length; i++) {
 		var li = document.createElement('li');
-		li.innerHTML = `<span id='${alboms[i].id}'>
-							${alboms[i].title}
-							<img
+		li.innerHTML = `<img
 								id='${alboms[i].id}'
 								style="background-image: url('${alboms[i].image}');
-									height: 100px;
-									width: 700px;"
-							/>
-						</span>`;
+									height: 170px;
+									width: 170px;"
+							/><br>
+		                <span id='${alboms[i].id}'>
+							${alboms[i].title}
+						</span><br>
+						<span id='${alboms[i].id}'>
+							${alboms[i].year}
+						</span>`;						
 		ul.appendChild(li);
 	}
 
@@ -136,7 +162,7 @@ function selectSong(event) {
 
 function playSong() {
 	if (_selectedSong && _selectedSong.url) {
-		playS.style.display = "none";
+		playSound.style.display = "none";
 		pause.style.display = "block";
 		temp = i;
 		nowPlay.innerHTML = _selectedSong.title;
@@ -152,20 +178,37 @@ function renderSongs(songs) {
 	for (i = 0; i < songs.length; i++) {
 		var icon = '';
 		if (_selectedSong.id === songs[i]) {
-			icon = 'http://veshuel.v.e.pic.centerblog.net/m1w80ils.gif';
+			icon = 'images/Playing.SVG';
 		}
 
 		const song = getItemById(songs[i], _songs);
 		var li = document.createElement('li');
-		li.innerHTML = `<span id='${song.id}'>
-							${song.title} - ${song.time}
+/*		li.innerHTML = `<span id='${song.id}'>			
+							${song.title}
 							<img
 								id='${song.id}'
 								style="background-image: url('${icon}');
-									height: 10px;
-									width: 10px;"
+									height: 18px;
+									width: 16px;
+									padding-right:100px;"
 							/>
-						</span>`;
+							${song.time}
+						</span>`; */
+		li.innerHTML = `<span id='${song.id}'
+		                 style="padding-right:120px;">			
+							${song.title}
+							
+						</span>
+							<img
+								id='${song.id}'
+								style="background-image: url('${icon}');
+									height: 18px;
+									width: 16px;
+									padding-right:10px;"
+							/>
+						<span id='${song.id}'>	
+							${song.time}
+						</span>`;				
 		ul.appendChild(li);
 	}
 
@@ -200,13 +243,13 @@ function play(buffer, time) {
 		if (s > 0) {
 			time = time-10*s;
 		}
-		timeS.innerHTML = m+""+tm+":"+s+""+time;
+		timeAll.innerHTML = m+""+tm+":"+s+""+time;
 	}
-	gainNode.gain.value = range.value;
+	gainNode.gain.value = rangeVolume.value;
 	audio.play();
 }
 
-playS.onclick = function() {
+playSound.onclick = function() {
 	this.style.display = "none";
 	pause.style.display = "block";
 	play();
@@ -214,11 +257,11 @@ playS.onclick = function() {
 
 pause.onclick = function() {
 	this.style.display = "none";
-	playS.style.display = "block";
+	playSound.style.display = "block";
 	audio.pause();
 }
 
-range.oninput = function() {
+rangeVolume.oninput = function() {
 	audio.volume = this.value;
 }
 
@@ -230,7 +273,7 @@ stop.onclick = function() {
 
 	if(audio.currentTime == 0){
 		pause.style.display = "none";
-		playS.style.display = "block";
+		playSound.style.display = "block";
 	}
 }
 
@@ -250,7 +293,7 @@ prev.onclick = function() {
 	}
 }
 
-progressT.oninput = function(){
+progressTime.oninput = function(){
 	audio.currentTime = this.value;
 	this.max = audio.duration;
 	setTimeout(function(){

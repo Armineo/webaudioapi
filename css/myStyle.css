@@ -1,201 +1,195 @@
+@media screen and (min-width:1024px){
 *{
 	margin: 0;
 	padding: 0;
 }
-div#main {
-	width: 50%;
-	margin-top:30px;
-  margin-left: 430px; 
-	padding: 20px 0;
-	position: relative;
-}
- 
- div#main p.nowPlay{
-     margin-top: 10px;
-     box-sizing: border-box;
-     padding-left: 25px;
-     text-transform: uppercase;
- }
 body{
-  position: relative;
+	font-family: "Avenir Next";
+    color: #FFFFFF;		
+}
+div#main {
+	width:600px;
+	position: relative;
+	float:left;
+	margin-right:80px;
+} 
+#gorillaz{
+	width:100%;
+	font-size: 90px;	
+	font-weight: bold;
+	line-height: 123px;
+    margin-left:25px;
+	margin-top:12px;
+}
+#albums{
+	margin-left:25px;
+	width:100%;
+}
+#line{
+	margin-left:25px; 
+	box-sizing: border-box;
+	height: 1px;	
+    width: 60px;
+	border: 1px solid #3191FB;
+    margin-top:10px;
+}
+#alboms{
+	margin-left:5px;
+    margin-top:10px;
+    width:600px;	
+}
+#alboms .alb li {
+	list-style:none;
+	float:left;
+	padding-left:20px;
+	padding-top:20px;
+}
+div #songs {	
+	width:600px;
+    height:100%;
+	float:left;
+	padding-top:80px;
+    -webkit-filter: blur(10px);
+    filter: blur(10px);
 }
 
-a{
-   text-decoration:none;	
-   display:block;
+#songs ul li{	
+	list-style:none;
+	padding-top:15px;
+}
+#songs ul li:first-child{	
+	padding-top:80px;
 }
 #player{
-  height: 40px;
-  width:800px;
-	position: relative;
-	border:1px solid silver;
-	border-radius: 5px;
-	margin: 20px 0 0 0;
+    width:100%;
+    height:70px;
+    background-color:#23262D;
+    margin-top:550px;	
 }
-#player div{
-  display: inline-block;
-}
-
-#player img{
-  cursor: pointer;
-	height: 30px;
-  width: 30px;
-  position: absolute;
-  left:15px;
-  top:0;
-}
-#player .stop img{
-  cursor: pointer;
-	height: 30px;
-  width: 30px;
-  position: absolute;
-  left:50px;
-  top:0;
-}
-#player .prev  img{
-  cursor: pointer;
-	height: 30px;
-  width: 30px;
-  position: absolute;
-  left:90px;
-  top:0;
-}
-#player .next img{
-  cursor: pointer;
-	height: 30px;
-  width: 30px;
-  position: absolute;
-  left:120px;
-  top:0;
-}
-
-#player div.time{
-  position: absolute;
-  top:0;
-  height: 30px;
-  left:150px;
-  padding-top: 7px;
-  box-sizing: border-box;
-}
-
-
-#player div.volume{
-  position: absolute;
-  height: 30px;
-  left:600px;
-   top:0px;
-   box-sizing: border-box;
-   padding-top: 5px;
-}
-
-#rangeP {  /* контейнер */
-  position: absolute;
-  top:10px;
-  -webkit-appearance: none;
-          appearance: none;
-  padding: 0;
-  border: 1px solid black;
-  background: black linear-gradient(white, white);
-  overflow: hidden;
-  outline: none;
-  height: 10px;
-  width: 110px;
-}
-#rangeP::-moz-range-thumb {  /* ползунок в Firefox */
-  border-radius: 2px;
-  box-shadow: -13px 0 black, -26px 0 black, -39px 0 black, -52px 0 black, -65px 0 black, -78px 0 black, -91px 0 black, -104px 0 black, -117px 0 black, -130px 0 black, -143px 0 black, -156px 0 black;
-
-}
-#rangeP::-moz-range-track {  /* линия, по которой он ездит в Firefox */
-  background: none;
-  border: none;
-}
-#rangeP::-webkit-slider-thumb {  /* ползунок в Хроме */
-  -webkit-appearance: none;
-  width:15px;
-  height:15px;
-  border: 1px solid #818181;
-  border-radius: 2px;
-  background-image: linear-gradient(#dedede, #f2f2f2);
-  box-shadow: -13px 0 black, -26px 0 black, -39px 0 black, -52px 0 black, -65px 0 black, -78px 0 black, -91px 0 black, -104px 0 black, -117px 0 black, -130px 0 black, -143px 0 black, -156px 0 black;
-}
-
-#progressTime {  /* контейнер */
-  position: absolute;
-  top:10px;
-  -webkit-appearance: none;
-          appearance: none;
-  padding: 0;
-  border: 1px solid black;
-  background: black linear-gradient(white, white);
-  overflow: hidden;
-  outline: none;
-  height: 10px;
-  width: 340px;
-  left:250px;
-}
-#progressTime::-moz-range-thumb {  /* ползунок в Firefox */
-  border-radius: 2px;
-  box-shadow: -13px 0 black,
-   -26px 0 black,
-    -39px 0 black,
-     -52px 0 black,
-      -65px 0 black,
-       -78px 0 black,
-        -91px 0 black,
-         -104px 0 black,
-          -117px 0 black,
-           -130px 0 black,
-            -143px 0 black,
-             -156px 0 black,
-              -169px 0 black,
-               -182px 0 black,
-               -195px 0 black,
-               -208px 0 black,
-               -222px 0 black,
-               -235px 0 black,
-               -248px 0 black,
-               -261px 0 black,
-               -274px 0 black,
-               -287px 0 black,
-               -300px 0 black,
-               -313px 0 black,
-               -326px 0 black;
-}
-#progressTime::-moz-range-track {  /* линия, по которой он ездит в Firefox */
-  background: none;
-  border: none;
-}
-#progressTime::-webkit-slider-thumb {  /* ползунок в Хроме */
-  -webkit-appearance: none;
-  width:15px;
-  height:15px;
-  border: 1px solid #818181;
-  border-radius: 2px;
-  background-image: linear-gradient(#dedede, #f2f2f2);
-  box-shadow: -13px 0 black, -26px 0 black, -39px 0 black, -52px 0 black, -65px 0 black, -78px 0 black, -91px 0 black, -104px 0 black, -117px 0 black, -130px 0 black, -143px 0 black, -156px 0 black;
-}
-
 #player .play img:last-child{
   display: none;
 }
-
-#list a{
-   color:black;
-   padding: 20px 10px;
-   border-bottom:1px solid silver;
-   text-transform: uppercase;
-   position: relative;
-   padding-left: 30px;
-   box-sizing: border-box; 
-}
-#list a img{
+#player.nowPlay{
+	 position: absolute;
+	 left:100px;
+     padding-top:30px;	 
+ }
+#player .prev  img{
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
   position: absolute;
-  left:5px;
-  top:20px;
+  left:180px; 
+  padding-top:30px;	 
 }
-#list a:hover{
-   background-color:black;
-   color: white;
-   opacity: 0.4;
+#player img{
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  left:200px;
+  padding-top:30px;	
 }
+#player .next img{
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  position: absolute;
+  left:220px;
+  padding-top:30px;	
+
+}
+#player .stop img{
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  position: absolute;
+  left:250px;
+  padding-top:30px;	
+
+}
+#player div.volume{
+  position: absolute;
+  height: 30px;
+  left:290px;
+  box-sizing: border-box;
+  padding-top:30px;	
+}
+#rangeVolume {  
+  position: absolute;
+  -webkit-appearance: none;
+          appearance: none;	
+  border: 1px solid #3B8BFD;
+  background: black linear-gradient(#3B8BFD, #3B8BFD);
+  overflow: hidden;
+  outline: none;
+  height: 4px;
+  width: 110px; 
+}
+#rangeVolume ::-moz-range-thumb {  
+  border-radius: 2px;
+  box-shadow: -13px 0 black, -26px 0 black, -39px 0 black, -52px 0 black, -65px 0 black, -78px 0 black, -91px 0 black, -104px 0 black, -117px 0 black, -130px 0 black, -143px 0 black, -156px 0 black;
+}
+#rangeVolume ::-moz-range-track {  
+  background: none;
+  border: none;
+}
+#rangeVolume ::-webkit-slider-thumb {  
+  -webkit-appearance: none;
+  width:15px;
+  height:15px;
+  border: 1px solid #818181;
+  border-radius: 2px;
+  background-image: linear-gradient(#dedede, #f2f2f2);
+  box-shadow: -13px 0 black, -26px 0 black, -39px 0 black, -52px 0 black, -65px 0 black, -78px 0 black, -91px 0 black, -104px 0 black, -117px 0 black, -130px 0 black, -143px 0 black, -156px 0 black;
+}
+#player div.time .timeNow{
+  position: absolute;
+  height: 30px;
+  left:450px;
+  padding-top: 7px;
+  box-sizing: border-box;
+  padding-top:30px;
+  color:#737785;  
+}
+#player div.time .timeAll{
+  position: absolute;
+  height: 30px;
+  left:1250px;
+  padding-top: 7px;
+  box-sizing: border-box;
+  padding-top:30px;
+  color:#737785;  
+}
+#progressTime {  
+  position: absolute;
+  -webkit-appearance: none;
+          appearance: none;
+  border: 1px solid #3B8BFD;
+  background: #3B8BFD linear-gradient(#3B8BFD, #3B8BFD);
+  overflow: hidden;
+  outline: none;
+  height: 4px;
+  width: 650px;
+  left:550px;
+  
+}
+#progressTime::-moz-range-thumb {  
+  border-radius: 2px;
+}
+#progressTime::-moz-range-track {  
+  background-color: #3B8BFD;
+  border: none;
+}
+#progressTime::-webkit-slider-thumb {  
+  -webkit-appearance: none;
+  width:15px;
+  height:15px;
+  border: 1px solid #818181;
+  border-radius: 2px;
+  background-image: linear-gradient(#dedede, #f2f2f2);
+  box-shadow: -13px 0 black, -26px 0 black, -39px 0 black, -52px 0 black, -65px 0 black, -78px 0 black, -91px 0 black, -104px 0 black, -117px 0 black, -130px 0 black, -143px 0 black, -156px 0 black;
+}
+
+}
+

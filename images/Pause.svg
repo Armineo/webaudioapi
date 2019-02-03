@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="8px" height="11px" viewBox="0 0 8 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>F6C76E6E-79B4-42D9-AB89-A4E5B9F6A09B</title>
+    <desc>Created with sketchtool.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Music-Player---Test-Project" transform="translate(-252.000000, -731.000000)" fill="#A1A4B2">
+            <g id="Bar/Dark" transform="translate(0.000000, 706.000000)">
+                <g id="Group-12" transform="translate(0.000000, -2.000000)">
+                    <g id="Controls" transform="translate(211.000000, 17.000000)">
+                        <path d="M42.9322327,10.1627618 C43.6155395,10.1627618 44.1694691,10.6491685 44.1694691,11.2491817 L44.1694691,19.5059727 C44.1694691,20.1059858 43.6155395,20.5923925 42.9322327,20.5923925 C42.2489259,20.5923925 41.6949963,20.1059858 41.6949963,19.5059727 L41.6949963,11.2491817 C41.6949963,10.6491685 42.2489259,10.1627618 42.9322327,10.1627618 Z M47.3627173,10.1627618 C48.0460241,10.1627618 48.5999537,10.6491685 48.5999537,11.2491817 L48.5999537,19.5059727 C48.5999537,20.1059858 48.0460241,20.5923925 47.3627173,20.5923925 C46.6794105,20.5923925 46.1254809,20.1059858 46.1254809,19.5059727 L46.1254809,11.2491817 C46.1254809,10.6491685 46.6794105,10.1627618 47.3627173,10.1627618 Z" id="Pause"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
