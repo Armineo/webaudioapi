@@ -15,28 +15,32 @@
 		  </div>
           <div id="line">
 		  </div>
-		  
+
 		  <div id="alboms" onclick="selectAlbom(event)">
 		  </div>
-          
+
 	</div>
-	<div  id="songs" onclick="selectSong(event)">
+	<div  id="songs"  onclick="selectSong(event)">
     </div>
 	<div id="player">
 		      <div class="nowPlay">
 			  </div>
 	      	  <div class="play">
-	      	  	<img id="playSound" src="images/Play.SVG" alt="">
-	      	  	<img class="pauseSound" src="images/Pause.SVG" alt="">
+	      	  	<img class="player-image" id="playSound" src="images/Play.SVG" alt="">
+	      	  	<img class="pauseSound player-image" src="images/Pause.SVG" alt="">
 	      	  </div>
 			  <div class="stop">
-	      	  	<img id="stopSound" class="stopSound" src="images/Stop.SVG" alt="">
+	      	  	<img id="stopSound" class="stopSound player-image" src="images/Stop.SVG" alt="">
 			  </div>
 			  <div class="next">
-	      	  	<img id="next" class="next" src="images/Next.png" alt="">
+	      	  	<img id="next" class="next player-image" src="images/Next.png" alt="">
 			  </div>
 			  <div class="prev">
-	      	  	<img id="prev" class="prev" src="images/Previous.png" alt="">
+	      	  	<img id="prev" class="prev player-image" src="images/Previous.png" alt="">
+			  </div>
+			  <div class="mutevolume">
+	      	  	<img id="mute" class="player-image" src="images/volumemute.png" alt="">
+				<img  class="unmute player-image" src="images/volume.png" alt="">
 			  </div>
 
 	      	  <div class="time">
@@ -50,8 +54,8 @@
 	      	  	  <input id="rangeVolume" type="range" min="0" max="1" step="0.2" value="0.5" data-control="gain">
 	      	  </div>
 	      </div>
-	
-	
+
+
 </body>
 <script src="js/myjs.js"></script>
 
