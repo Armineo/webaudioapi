@@ -25,35 +25,31 @@ div#main {
 	font-size: 90px;
 	font-weight: bold;
 	line-height: 123px;
-    margin-left: 25px;
-	margin-top: 12px;
+	margin: 12px 0 0 25px;
 }
 
-#albums{
+.albumsContent{
 	margin-left: 25px;
 	width: 100%;
 }
 
 #line{
-	margin-left: 25px;
 	box-sizing: border-box;
 	height: 1px;
     width: 60px;
 	border: 1px solid #3191FB;
-    margin-top: 10px;
+    margin: 10px 0 0 25px;
 }
 
 #alboms{
-	margin-left: 5px;
-    margin-top: 10px;
-    width: 600px;
+    margin: 10px 0 0 5px;
+    width: 600px;  
 }
 
 #alboms li {
 	list-style: none;
 	float: left;
-	padding-left: 20px;
-	padding-top: 20px;
+	padding: 20px 0 0 20px;
 }
 
 # songs::before {
@@ -73,7 +69,6 @@ div#main {
 	-ms-filter: blur(5px);
 	filter: blur(5px); 
 	overflow: auto; 
-	-webkit-filter: blur(5px);
 } 
 
 #songs {
@@ -84,8 +79,7 @@ div#main {
 	min-width: 350px;
     height: 100%;
     float: right;
-	min-height: 750px;
-	
+	min-height: 750px;	
 }
 
 #songs ul {
@@ -231,7 +225,7 @@ div#main {
     outline: none;
     height: 4px;
     width: 110px;
-   margin-top: 2px;
+    margin-top: 2px;
 }
 
 #rangeVolume ::-moz-range-track {

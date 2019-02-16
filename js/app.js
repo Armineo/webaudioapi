@@ -7,150 +7,143 @@ var PlayerController = {
   		id: 1,
   		title: 'Humans (Deluxe)',
   		year: 2017,
-  		songs: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,2,3,4,5,6,7,8,9,10,11,12,13,14],
+  		songs: [1,2,3,4,5,6,7,8,9,10,11,12,13,14],
   		image: 'images/Album1.png',
   	},
   	{
   		id: 2,
   		title: 'Plastic Beach',
   		year: 2010,
-  		songs: [1,3,4,7,8,9,11,12,14,3,4,5,6,7,8,9,10,11,12,13,14,2,3,4,5,6,7,8,9],
+  		songs: [1,2,3,4,5,6,7,8,9,10,11,12,13,14],
   		image: 'images/Album2.png',
   	},
   	{
   		id: 3,
   		title: 'The Fall',
   		year: 2010,
-  		songs: [1,2,4,1,3,4,7,8,9,11,12,14,3,4,5,6,7,8,9,10,11,12,13,14,2,3,4,5],
+  		songs: [1,2,3,4,5,6,7,8,9,10,11,12,13,14],
   		image: 'images/Album3.png',
   	},
   	{
   		id: 4,
   		title: 'D Sides',
   		year: 2009,
-  		songs: [1,2,1,2,4,1,3,4,7,8,9,11,12,14,3,4,5,6,7,8,9,10,11,12,13,14,2,3,4,5,3,10,9,8,7],
+  		songs: [1,2,3,4,5,6,7,8,9,10,11,12,13,14],
   		image: 'images/Album4.png',
   	},
   	{
   		id: 5,
   		title: 'Demon Days',
   		year: 2007,
-  		songs: [1,2,1,2,4,1,3,4,7,8,9,11,12,14,3,4,5,6,7,8,9,10,11,12,13,14,2,3,4,5,3,10,9,3],
+  		songs: [1,2,3,4,5,6,7,8,9,10,11,12,13,14],
   		image: 'images/Album5.png',
   	},
   	{
   		id: 6,
   		title: 'Gorillaz',
   		year: 2006,
-  		songs: [2,4,1,3,4,7,8,9,11,12,14,3,4,5,6,7,8,9,10,11,12,13,14,2,3,4,5,3,10,9,3,1,2,4,1,3,4,7,8,9,11,12,14,3,4,5],
+  		songs: [1,2,3,4,5,6,7,8,9,10,11,12,13,14],
   		image: 'images/Album6.png',
   	},
   ],
   _songs: [
   	{
   		id: 1,
-  		title: 'Gorillaz Clint_Eastwood',
+  		title: 'song 1',
   		author: 'test author 1',
-  		url: 'data/Gorillaz Clint_Eastwood.mp3',
-  		time: '1:11',
+  		url: 'data/Clint_Eastwood.mp3',
+  		time: '03:35',
   	},
   	{
   		id: 2,
   		title: 'song 2',
   		author: 'test author 2',
-  		url: 'data/five.mp3',
-  		time: '1:20',
+  		url: 'data/feel-good-inc.mp3',
+  		time: '03:42',
   	},
   	{
   		id: 3,
   		title: 'song 3',
   		author: 'test author 3',
-  		url: 'data/four.mp3',
-  		time: '1:23',
+  		url: 'data/saturnz-barz-feat-popcaan.mp3',
+  		time: '03:01',
   	},
   	{
   		id: 4,
   		title: 'song 4',
   		author: 'test author 4',
-  		url: 'data/first.mp3',
-  		time: '1:45',
+  		url: 'data/tranz.mp3',
+  		time: '02:42',
   	},
   	{
   		id: 5,
   		title: 'song 5',
   		author: 'test author 5',
-  		url: 'data/first.mp3',
-  		time: '1:45',
+  		url: 'data/650446.mp3',
+  		time: '02:42',
   	},
   	{
   		id: 6,
   		title: 'song 6',
   		author: 'test author 6',
-  		url: 'data/first.mp3',
-  		time: '1:45',
+  		url: 'data/feat.-vince-staples-ascension.mp3',
+  		time: '02:36',
   	},
   	{
   		id: 7,
   		title: 'song 7',
   		author: 'test author 7',
-  		url: 'data/first.mp3',
-  		time: '1:45',
+  		url: 'data/feat.-mavis-staples-pusha-t-let-me-out.mp3',
+  		time: '02:55',
   	},
   	{
   		id: 8,
   		title: 'song 8',
   		author: 'test author 8',
-  		url: 'data/first.mp3',
-  		time: '1:45',
-  	},
-  	{
-  		id: 8,
-  		title: 'song 8',
-  		author: 'test author 8',
-  		url: 'data/first.mp3',
-  		time: '1:45',
+  		url: 'data/gorillaz-feat.-d.r.a.m.-andromeda.mp3',
+  		time: '03:17',
   	},
   	{
   		id: 9,
   		title: 'song 9',
   		author: 'test author 9',
-  		url: 'data/first.mp3',
-  		time: '1:45',
+  		url: 'data/gorillaz-feat.-little-simz-garage-palace.mp3',
+  		time: '02:31',
   	},
   	{
   		id: 10,
   		title: 'song 10',
   		author: 'test author 10',
-  		url: 'data/first.mp3',
-  		time: '1:45',
+  		url: 'data/gorillaz-on-melancholy-hill.mp3',
+  		time: '03:53',
   	},
   	{
   		id: 11,
   		title: 'song 11',
   		author: 'test author 11',
-  		url: 'data/first.mp3',
-  		time: '1:45',
+  		url: 'data/gorillaz-feat.-snoop-dogg-jamie-principle-hollywood.mp3',
+  		time: '04:53',
   	},
   	{
   		id: 12,
   		title: 'song 12',
   		author: 'test author 12',
-  		url: 'data/first.mp3',
-  		time: '1:45',
+  		url: 'data/gorillaz-clint-eastwood.mp3',
+  		time: '04:30',
   	},
   	{
   		id: 13,
   		title: 'song 13',
   		author: 'test author 13',
-  		url: 'data/first.mp3',
-  		time: '1:45',
+  		url: 'data/gorillaz-feat.-carly-simon-amp-kali-uchis-ticker-tape.mp3',
+  		time: '04:28',
   	},
-  	{
+    {
   		id: 14,
   		title: 'song 14',
   		author: 'test author 14',
-  		url: 'data/first.mp3',
-  		time: '1:45',
+  		url: 'data/Gorillaz – DARE(seehall.me).mp3',
+  		time: '04:04',
   	},
 
   ],
@@ -261,31 +254,41 @@ var PlayerController = {
     	this.mute.style.display = "block";
     	this.audio.muted = true;
     }
-
-    this.next.onclick = _ => {
-    	const currentIndex = this._selectedAlbom.songs.findIndex(item => item === this._selectedSong.id);
- //       const currentIndex = this.getSongIndex();
+	
+	const getSongIndex = () => {
+		return this._selectedAlbom.songs.findIndex(item => item === this._selectedSong.id);
+	} 
+	
+	const nextSong = () => {
+		const currentIndex = getSongIndex();
     	this._selectedSong = this.getItemById(this._selectedAlbom.songs[currentIndex + 1] || this._selectedAlbom.songs[0], this._songs);
     	this.playSong();
     	this.renderSongs(this._selectedAlbom.songs);
+	}
+
+    this.next.onclick = _ => {
+    	/*const currentIndex = this._selectedAlbom.songs.findIndex(item => item === this._selectedSong.id);
+        const currentIndex = getSongIndex();
+    	this._selectedSong = this.getItemById(this._selectedAlbom.songs[currentIndex + 1] || this._selectedAlbom.songs[0], this._songs);
+    	this.playSong();
+    	this.renderSongs(this._selectedAlbom.songs); */
+		nextSong();
     }
     
     this.prev.onclick = _ => {
-     	const currentIndex = this._selectedAlbom.songs.findIndex(item => item === this._selectedSong.id);
-   //     const currentIndex = this.getSongIndex();
+     	 //const currentIndex = this._selectedAlbom.songs.findIndex(item => item === this._selectedSong.id);
+            const currentIndex = getSongIndex();
     	if (this._selectedAlbom.songs[currentIndex - 1]) {
-    		this._selectedSong = this.getItemById(this._selectedAlbom.songs[currentIndex - 1] || this._selectedAlbom.songs[length-1], this._songs);
+    		this._selectedSong = this.getItemById(this._selectedAlbom.songs[currentIndex - 1], this._songs);
     		this.playSong();
     		this.renderSongs(this._selectedAlbom.songs);
     	}
     }
 	
-/*	getSongIndex: function(){
-		this._selectedAlbom.songs.findIndex(item => item === this._selectedSong.id);
-	} */
+	
 	
    this.audio.onended = _ =>{
-	   this.next();
+	   nextSong();
    }
    
     this.progressTime.oninput = _ => {
