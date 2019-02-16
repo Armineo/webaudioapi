@@ -2,61 +2,68 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>audioPlayer</title>
-     <link rel="stylesheet" href="css/myStyle.css">
+	<title>AudioPlayer</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body style="background-image: url('images/BG.png');">
+<body>
+	
 	<div id="main">
-          <div id="gorillaz">
-			<p>Gorillaz</p>
+          <div class="albumTitle">
+			 <p>Gorillaz</p>
 		  </div>
           <div id="albums">
-			<p>Albums</p>
+			 <p>Albums</p>
 		  </div>
           <div id="line">
 		  </div>
-
-		  <div id="alboms" onclick="selectAlbom(event)">
+		  <div id="alboms"  onclick="PlayerController.selectAlbom(event)">
 		  </div>
-
 	</div>
-	<div  id="songs"  onclick="selectSong(event)">
+	
+	<div  id="songs"  onclick="PlayerController.selectSong(event)">
     </div>
+	
 	<div id="player">
-		      <div class="nowPlay">
-			  </div>
-	      	  <div class="play">
-	      	  	<img class="player-image" id="playSound" src="images/Play.SVG" alt="">
-	      	  	<img class="pauseSound player-image" src="images/Pause.SVG" alt="">
-	      	  </div>
-			  <div class="stop">
-	      	  	<img id="stopSound" class="stopSound player-image" src="images/Stop.SVG" alt="">
-			  </div>
-			  <div class="next">
-	      	  	<img id="next" class="next player-image" src="images/Next.png" alt="">
-			  </div>
-			  <div class="prev">
-	      	  	<img id="prev" class="prev player-image" src="images/Previous.png" alt="">
-			  </div>
-			  <div class="mutevolume">
-	      	  	<img id="mute" class="player-image" src="images/volumemute.png" alt="">
-				<img  class="unmute player-image" src="images/volume.png" alt="">
-			  </div>
+		 <div id="nowPlay">
+		 </div>
+		 
+	     <div class="play">
+	      	 <img class="player-image" id="playSound" src="images/Play.SVG" alt="">
+	      	 <img id="pauseSound" class="player-image" src="images/Pause.SVG" alt="">
+	     </div>
+		 
+		 <div class="stop">
+	      	 <img id="stopSound" class="player-image" src="images/Stop.SVG" alt="">
+		 </div>
+		 
+		 <div id="next">
+	      	 <img class="next player-image" src="images/Next.png" alt="">
+		 </div>
+		 
+		 <div id="prev">
+	      	 <img class="prev player-image" src="images/Previous.png" alt="">
+		 </div>
+		 
+		 <div class="mutevolume">
+	      	 <img id="mute" class="player-image" src="images/volumemute.png" alt="">
+			 <img id="unmute" class="player-image" src="images/volume.png" alt="">
+		 </div>
 
-	      	  <div class="time">
-	      	     <span class="timeNow">00:00</span>
-				 <span class="timeAll">00:00</span>
-	      	  </div>
-	      	  <div class="progress">
-	      	  	    <input id="progressTime" type="range" min="0" max="0" step="1" value="0" >
-	      	  </div>
-	      	  <div class="volume">
-	      	  	  <input id="rangeVolume" type="range" min="0" max="1" step="0.2" value="0.5" data-control="gain">
-	      	  </div>
-	      </div>
-
+	     <div class="time">
+	      	 <span id="timeNow">00:00</span>
+			 <span id="timeAll">00:00</span>
+	     </div>
+		 
+	     <div class="progress">
+	      	 <input id="progressTime" type="range" min="0" max="0" step="1" value="0" >
+	     </div>
+		 
+	     <div class="volume">
+	      	 <input id="rangeVolume" type="range" min="0" max="1" step="0.2" value="0.5" data-control="gain"> 
+	     </div>
+	  </div>
 
 </body>
-<script src="js/myjs.js"></script>
+<script src="js/app.js"></script>
 
 </html>
